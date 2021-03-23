@@ -10,15 +10,16 @@ package main.java.model;
  */
 public class ContactService {
 
-	
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		
-		
+	//create new contact with unique contact ID
+	public void createContact() {
 	}
 	
+	//delete contact using contact ID
+	public void deleteContact() {
+	}
+	
+	//update contact info using contact ID
+	public void updateContact() {
+	}
+
 }

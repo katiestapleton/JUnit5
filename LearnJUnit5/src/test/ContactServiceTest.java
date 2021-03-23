@@ -16,23 +16,20 @@ import org.junit.jupiter.api.Test;
  * SNHU 320 Testing
  * Module 3 - Milestone
  */
+
+//Junit Testing for Contact Services
 class ContactServiceTest {
 
 	
+	// setup for all tests
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
+	static void setUpBeforeTest() throws Exception {
 	}
 
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
+    //setup for each test
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -40,16 +37,37 @@ class ContactServiceTest {
 	void setUp() throws Exception {
 	}
 
+
+	// Deploy tests for contactServices methods
+	@Test
+	void testCreateContact() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	void testDeleteContact() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	void testUpdateContact() {
+		fail("Not yet implemented");
+	}
+
+	//tear down each test
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@AfterEach
 	void tearDown() throws Exception {
 	}
-
-	@Test
-	void test() {
-		fail("Not yet implemented");
+	
+	//tear down all tests
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@AfterAll
+	static void tearDownAfterTest() throws Exception {
 	}
-
+	
 }
