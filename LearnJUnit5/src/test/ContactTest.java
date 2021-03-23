@@ -1,6 +1,9 @@
 /**
- * 
+ * @author Katie Stapleton
+ * SNHU 320 Testing
+ * Module 3 - Milestone
  */
+
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,15 +14,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-/**
- * @author Katie Stapleton
- * SNHU 320 Testing
- * Module 3 - Milestone
- * Testing for Contact
- */
+// JUnit Testing for Contact objects
 class ContactTest {
-
-
+	
 	// setup for all tests
 	/**
 	 * @throws java.lang.Exception
@@ -28,6 +25,7 @@ class ContactTest {
 	static void setUpBeforeTest() throws Exception {
 	}
 
+	
     //setup for each test
 	/**
 	 * @throws java.lang.Exception
@@ -37,31 +35,107 @@ class ContactTest {
 	}
 
 
-	// Deploy tests for contact objects
+	// Tests for contact objects
+	// test contactID object
 	@Test
 	void testContactID() {
-		fail("Not yet implemented");
+		// contactID - 11 characters
+		String contactID = "ID123456789";
+		int actualLength = contactID.length();
+		int maxLength = 10;
+		
+		assertAll("contact ID",
+			// required object
+			() -> assertFalse(contactID.isBlank()),
+		    // more than 10 characters
+			() -> assertFalse(maxLength < actualLength),
+		    // not null (test for "null")
+			() -> assertNotNull(contactID)
+		);
+		
+		fail("Failed: Exception thrown or not yet implemented");
 	}
 	
+	// test first name object
 	@Test
 	void testFirstName() {
-		fail("Not yet implemented");
+		// first name - 11 characters
+		String firstName = "Alexandrias";
+		int actualLength = firstName.length();
+		int maxLength = 10;
+		
+		assertAll("first name",
+			// required object
+			() -> assertFalse(firstName.isBlank()),
+			// more than 10 characters
+			() -> assertFalse(maxLength < actualLength),
+			// not null
+			() -> assertNotNull(firstName)	
+		);
+		
+		fail("Failed: Exception thrown or not yet implemented");
 	}
 	
+	// test last name object
 	@Test
 	void testLastName() {
-		fail("Not yet implemented");
+		// last name - 11 characters
+		String lastName = "DeCoronados";
+		int actualLength = lastName.length();
+		int maxLength = 10;
+		
+		assertAll("last name",
+			// required object
+			() -> assertFalse(lastName.isBlank()),
+			// more than 10 characters
+			() -> assertFalse(maxLength < actualLength),
+			// not null
+			() -> assertNotNull(lastName)
+		);
+		
+		fail("Failed: Exception thrown or not yet implemented");
 	}
 	
+	// test phone object
 	@Test
 	void testPhone() {
-		fail("Not yet implemented");
+		// phone - 10 characters
+		String phone = "8665553579";
+		int actualLength = phone.length();
+		int expectedLength = 10;
+		
+		assertAll("phone",
+			// required object
+			() -> assertFalse(phone.isBlank()),
+			// not equal to --exactly-- 10 digits
+			() -> assertEquals(expectedLength, actualLength),
+			// not null
+			() -> assertNotNull(phone)
+		);
+		
+		fail("Failed: Exception thrown or not yet implemented");
 	}
 	
+	// test address object
 	@Test
 	void testAddress() {
-		fail("Not yet implemented");
+		// address - 31 characters
+		String address = "2573 SW Main St Jacksonville NH";
+		int actualLength = address.length();
+		int maxLength = 30;
+		
+		assertAll("address",
+			// required object
+			() -> assertFalse(address.isBlank()),
+			// more than 30 characters
+			() -> assertFalse(maxLength < actualLength),
+			// not null
+			() -> assertNotNull(address)
+		);
+		
+		fail("Failed: Exception thrown or not yet implemented");
 	}
+	
 	
 	//tear down each test
 	/**
@@ -70,6 +144,7 @@ class ContactTest {
 	@AfterEach
 	void tearDown() throws Exception {
 	}
+	
 	
 	//tear down all tests
 	/**

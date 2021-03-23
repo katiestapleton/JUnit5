@@ -1,26 +1,29 @@
-/**
- * 
- */
-package main.java.model;
-
-/**
+/*
  * @author Katie Stapleton
  * SNHU 320 Testing
  * Module 3 - Milestone
  */
 
+package main.java.model;
 
 public class Contact {
+
+	String contactID;
+	String firstName;
+	String lastName;
+	String phone;
+	String address;
 	
+	/*  UNSURE OF WHICH IS THE PROPER WAY TO CODE THIS
 	private String contactID;
 	private String firstName;
 	private String lastName;
 	private String phone;
-	// alt: private int phone
 	private String address;
 	
 	// getters and setters for objects
 	public String getContactID() {
+		
 		return contactID;
 	}
 	
@@ -58,7 +61,7 @@ public class Contact {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
+*/
 	
 	
 

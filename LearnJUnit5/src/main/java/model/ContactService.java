@@ -1,14 +1,15 @@
 /**
- * 
- */
-package main.java.model;
-
-/**
  * @author Katie Stapleton
  * SNHU 320 Testing
  * Module 3 - Milestone
  */
+
+package main.java.model;
+
+
 public class ContactService {
+	
+	Contact contact = new Contact(); 
 
 	//create new contact with unique contact ID
 	public void createContact() {
