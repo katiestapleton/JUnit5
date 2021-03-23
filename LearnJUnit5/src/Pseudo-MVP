@@ -1,0 +1,60 @@
+	Katie Stapleton
+	JAVA + JUNIT PSEUDOCODE
+	
+	Contact.java
+	
+	/*
+**MVP REQUIREMENTS***
+
+FILES
+	Contact.java
+	ContactTest.java
+ * ---objects:-----------------------------------------------
+ * String - contactID.
+ * - UNIQUE
+ * - max 10 ch
+ * - !=null
+ * String - firstName.
+ * - max 10 ch
+ * - !=null
+ * String - lastName.
+ * - max 10 ch
+ * - !=null
+ * String - phone.
+ * - == 10 digits exactly. (illogical. asking question)
+ * - !=null
+ * String - address.
+ * - max 30 ch
+ * - !=null
+ * -----------------------------------------------------------
+ 
+ FILES:
+	 ContactService.java
+	 ContactServiceTest.java
+	 ---objects-------------------------------------------------
+	 * from the contact.java page
+	 * 
+	 * FIELDS:
+	 * - string- contactID (unique)
+	 * - string- firstName
+	 * - string- lastName
+	 * - string??- phone
+	 * - string- address
+	 * 
+	 ----methods-------------------------------------------------
+	 * !Required methods for program to function!
+	 * 
+	 * !CREATE/add contacts with contactID. 
+	 * - all fields.
+	 * 
+	 * !UPDATE contacts via contactID. 
+	 * - update fields: firstName, lastName, phone, address
+	 * - NO update: contactID. !Important!
+	 * 
+	 * !DELETE contacts via contactID. 
+	 * - all fields
+	 * 
+	 * READ contact info. 
+	 * - optional. consider adding for debugging
+	 ---------------------------------------------------------
+	 */

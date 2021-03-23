@@ -12,11 +12,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * @author ladyg
- *
+ * @author Katie Stapleton
+ * SNHU 320 Testing
+ * Module 3 - Milestone
  */
 class ContactServiceTest {
 
+	
 	/**
 	 * @throws java.lang.Exception
 	 */
