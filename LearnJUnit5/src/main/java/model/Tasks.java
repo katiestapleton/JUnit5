@@ -4,12 +4,23 @@
  * Module 4 - Milestone
  */
 
+/* string task ID
+ * string name
+ * string description
+ */
+
 package main.java.model;
 
 public class Tasks {
 
-	public Tasks() {
+	String taskID;
+	String taskName;
+	String taskDesc;
+	
+	/*
+	 * public Tasks() {
 		// TODO Auto-generated constructor stub
 	}
+	*/
 
 }

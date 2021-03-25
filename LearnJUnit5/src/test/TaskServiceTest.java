@@ -16,25 +16,66 @@ import org.junit.jupiter.api.Test;
 
 class TaskServiceTest {
 
+	// setup for all tests
+	/**
+	 * @throws java.lang.Exception
+	 */
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
 
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
+	//setup for each test
+	/**
+	 * @throws java.lang.Exception
+	 */
 	@BeforeEach
 	void setUp() throws Exception {
 	}
+	
+	
+	// Tests for task services
+	// test for create task service
+	// unique ID
+	// unique ID (existing ID != new ID)
+	// required: taskID, taskName, taskDesc
+	@Test
+	void createTaskTest() {
+		fail("Not yet implemented");
+	}
+    
+	// test for delete task service
+	// cannot find contact via ID
+	// delete: taskID, taskName, task Desc
+	@Test
+	void deleteTaskTest() {
+		fail("Not yet implemented");
+	}
+	
+	// test for update task service
+	// cannot find contact via taskID
+	// not updatable object: taskID
+	// update: taskName, task Desc
+	@Test
+	void updateTaskTest() {
+		fail("Not yet implemented");
+	}
 
+
+	//tear down each test
+	/**
+	 * @throws java.lang.Exception
+	 */
 	@AfterEach
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
+	//tear down all tests
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
 	}
+	
 
 }

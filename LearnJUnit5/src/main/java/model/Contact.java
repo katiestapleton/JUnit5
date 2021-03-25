@@ -8,11 +8,13 @@ package main.java.model;
 
 public class Contact {
 
+	// public Contact() {
 	String contactID;
 	String firstName;
 	String lastName;
 	String phone;
 	String address;
+	// }
 	
 	/*  UNSURE OF WHICH IS THE PROPER WAY TO CODE THIS
 	private String contactID;
