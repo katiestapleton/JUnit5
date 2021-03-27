@@ -2,7 +2,15 @@
  * @author Katie Stapleton
  * SNHU 320 Testing
  * Module 4 - Milestone
+ * 03/25/2020
  */
+
+    /* task objects + variables:
+	String taskID;
+	String taskName;
+	String taskDesc;
+	*/
+
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;

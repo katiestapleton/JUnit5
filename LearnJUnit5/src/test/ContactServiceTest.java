@@ -2,7 +2,14 @@
  * @author Katie Stapleton
  * SNHU 320 Testing
  * Module 3 - Milestone
+ * 03/21/2020
  */
+
+	// Contact Services:	
+	/* add contacts per unique contact ID
+	 * delete contacts per contact ID
+	 * Update contacts per contact ID: firstName, lastName, phone, address
+	 */
 
 package test;
 

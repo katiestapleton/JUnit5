@@ -2,9 +2,11 @@
  * @author Katie Stapleton
  * SNHU 320 Testing
  * Module 4 - Milestone
+ * 03/25/2020
  */
 
-/* string task ID
+/* Task variables + objects:
+ * string taskID
  * string name
  * string description
  */

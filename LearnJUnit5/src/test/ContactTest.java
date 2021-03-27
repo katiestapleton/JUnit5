@@ -2,8 +2,16 @@
  * @author Katie Stapleton
  * SNHU 320 Testing
  * Module 3 - Milestone
+ * 03/21/2020
  */
 
+/* Contact objects/variables:
+	String contactID;
+	String firstName;
+	String lastName;
+	String phone;
+	String address;
+*/	
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;

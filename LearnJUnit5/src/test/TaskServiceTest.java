@@ -2,7 +2,14 @@
  * @author Katie Stapleton
  * SNHU 320 Testing
  * Module 4 - Milestone
+ * 03/25/2020
  */
+
+	// Task services:	
+	/* add tasks per unique task ID
+	 * delete task per task US
+	 * Update tasks per task ID: name, description
+	 */
 
 package test;
 
@@ -35,11 +42,11 @@ class TaskServiceTest {
 	
 	// Tests for task services
 	// test for create task service
-	// unique ID
 	// unique ID (existing ID != new ID)
 	// required: taskID, taskName, taskDesc
 	@Test
 	void createTaskTest() {
+		
 		fail("Not yet implemented");
 	}
     

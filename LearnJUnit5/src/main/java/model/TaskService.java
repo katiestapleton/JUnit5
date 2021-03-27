@@ -2,13 +2,14 @@
  * @author Katie Stapleton
  * SNHU 320 Testing
  * Module 4 - Milestone
+ * 03/25/2020
  */
 
-	//Services:	
-		/* add tasks per unique ID
-		 * delete task per task US
-		 * Update tasks per task ID: name, description
-		 */
+	// Task services:	
+	/* add tasks per unique task ID
+	 * delete task per task US
+	 * Update tasks per task ID: name, description
+	 */
 
 package main.java.model;
 

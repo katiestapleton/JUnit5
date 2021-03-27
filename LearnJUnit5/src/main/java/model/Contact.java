@@ -2,7 +2,18 @@
  * @author Katie Stapleton
  * SNHU 320 Testing
  * Module 3 - Milestone
+ * 03/21/2020
  */
+
+// Contact variables + objects:
+/*
+ * string contactID
+ * string firstName
+ * string lastName
+ * string phone
+ * string address
+ */
+
 
 package main.java.model;
 
