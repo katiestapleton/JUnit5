@@ -24,12 +24,14 @@ import org.junit.jupiter.api.Test;
 
 // JUnit Testing for ContactService
 class ContactServiceTest {
-
-	String contactID = "ID12345678";
+	
+	
+	// declare variables needed for testing
+	String contactID = "ID34567890";
 	String firstName = "Charlie";
 	String lastName = "Franklin";
 	String phone = "8665553579";
-	String address = "159 E Main St Springer IL";
+	String address = "159 E Main St Springer IL";	
 	
 	// setup for all tests
 	/**
@@ -44,7 +46,7 @@ class ContactServiceTest {
 	 * @throws java.lang.Exception
 	 */
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() throws Exception {	
 	}
 
 
@@ -56,7 +58,7 @@ class ContactServiceTest {
 		String contactID2 = "ID98765432";
 		
 		assertAll("add contact service",
-			// unique ID (existing ID != new ID)
+			// unique contact ID (existing ID != new ID)
 			() -> assertNotEquals(contactID, contactID2),
 			// required: contactID, firstName, lastName, phone, address
 			() -> assertFalse(contactID.isBlank()),
@@ -75,8 +77,8 @@ class ContactServiceTest {
 		String contactID2 = "ID98765432";
 		
 		assertAll("delete contact service",
-			// cannot find known contact via contactID
-			() -> assertNotEquals(contactID, contactID2),
+			// find known contact via contactID
+			() -> assertEquals(contactID, contactID2),
 			// delete: contactID, firstName, lastName, phone, address
 			() -> assertTrue(contactID.isBlank()),
 			() -> assertTrue(firstName.isBlank()),
@@ -97,13 +99,16 @@ class ContactServiceTest {
 		String phone2 = "4295556271";
 		String address2 = "504 NE Johnson Rd Fields FL";
 		
-		String contactID3 = "ID98765432";
+		// contactID is not updatable
+		// Expected ID and actual ID should be matching
+		//String contactID3 = contactID;
+		String contactID3 = "ID34567890";
 		
 		assertAll("update contact service",
-			// cannot find known contact via contactID
-			() -> assertNotEquals(contactID, contactID2),
+			// find known contact via contactID
+			() -> assertEquals(contactID, contactID2),
 			// not updatable object: contactID
-			() -> assertEquals(contactID2, contactID3),
+			() -> assertNotEquals(contactID, contactID3),
 			// updatable objects: firstName, lastName, phone, address
 			() -> assertNotEquals(contactID, contactID2),
 			() -> assertNotEquals(firstName, firstName2),

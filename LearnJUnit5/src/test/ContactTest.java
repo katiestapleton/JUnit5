@@ -40,6 +40,7 @@ class ContactTest {
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
+		
 	}
 
 
@@ -53,10 +54,10 @@ class ContactTest {
 		int maxLength = 10;
 		
 		assertAll("contact ID",
-			// required object
+			// required object. test for unique ID in create contact 
 			() -> assertFalse(contactID.isBlank()),
-		    // more than 10 characters
-			() -> assertFalse(maxLength < actualLength),
+		    // max 10 characters
+			() -> assertFalse(maxLength > actualLength),
 		    // not null (test for "null")
 			() -> assertNotNull(contactID)
 		);
@@ -67,16 +68,16 @@ class ContactTest {
 	// test first name object
 	@Test
 	void testFirstName() {
-		// first name - 11 characters
+		// first name is 11 characters
 		String firstName = "Alexandrias";
 		int actualLength = firstName.length();
 		int maxLength = 10;
 		
-		assertAll("first name",
+		assertAll("contact first name",
 			// required object
 			() -> assertFalse(firstName.isBlank()),
-			// more than 10 characters
-			() -> assertFalse(maxLength < actualLength),
+			// max 10 characters
+			() -> assertFalse(maxLength > actualLength),
 			// not null
 			() -> assertNotNull(firstName)	
 		);
@@ -87,16 +88,16 @@ class ContactTest {
 	// test last name object
 	@Test
 	void testLastName() {
-		// last name - 11 characters
+		// last name is 11 characters
 		String lastName = "DeCoronados";
 		int actualLength = lastName.length();
 		int maxLength = 10;
 		
-		assertAll("last name",
+		assertAll("contact last name",
 			// required object
 			() -> assertFalse(lastName.isBlank()),
-			// more than 10 characters
-			() -> assertFalse(maxLength < actualLength),
+			// max 10 characters
+			() -> assertFalse(maxLength > actualLength),
 			// not null
 			() -> assertNotNull(lastName)
 		);
@@ -107,15 +108,15 @@ class ContactTest {
 	// test phone object
 	@Test
 	void testPhone() {
-		// phone - 10 characters
+		// phone is 10 characters
 		String phone = "8665553579";
 		int actualLength = phone.length();
 		int expectedLength = 10;
 		
-		assertAll("phone",
+		assertAll("contact phone",
 			// required object
 			() -> assertFalse(phone.isBlank()),
-			// not equal to --exactly-- 10 digits
+			// --exactly-- 10 digits (not equal to 10)
 			() -> assertEquals(expectedLength, actualLength),
 			// not null
 			() -> assertNotNull(phone)
@@ -127,16 +128,16 @@ class ContactTest {
 	// test address object
 	@Test
 	void testAddress() {
-		// address - 31 characters
+		// address is 31 characters
 		String address = "2573 SW Main St Jacksonville NH";
 		int actualLength = address.length();
 		int maxLength = 30;
 		
-		assertAll("address",
+		assertAll("contact address",
 			// required object
 			() -> assertFalse(address.isBlank()),
-			// more than 30 characters
-			() -> assertFalse(maxLength < actualLength),
+			// max 30 characters
+			() -> assertFalse(maxLength > actualLength),
 			// not null
 			() -> assertNotNull(address)
 		);

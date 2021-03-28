@@ -41,14 +41,23 @@ class TaskTest {
 	
 	
 	// Tests for task objects
-	
 	// test taskID object
-	// required
-	// unique ID
-	// max length 10 ch
-	// not null
 	@Test
 	void taskIDtest() {
+		// task ID is 11 characters
+		String taskID = "Task45678901";
+		int actualLength = taskID.length();
+		int maxLength = 10;
+		
+		assertAll("task ID",
+			// required object. test for unique ID in create task
+			() -> assertFalse(taskID.isBlank()),	
+			// max 10 characters
+			() -> assertFalse(maxLength > actualLength),
+			// not null (test for "null")
+			() -> assertNotNull(taskID)
+		);
+		
 		fail("Not yet implemented");
 	}
 
@@ -58,6 +67,20 @@ class TaskTest {
 	// not null
 	@Test
 	void taskNameTest() {
+		// task name is 21 characters
+		String taskName = "Wash and rinse dishes";
+		int actualLength = taskName.length();
+		int maxLength = 20;
+		
+		assertAll("task name",
+			// required object
+			() -> assertFalse(taskName.isBlank()),	
+			// max 20 characters
+			() -> assertFalse(maxLength > actualLength),
+			// not null (test for "null")
+			() -> assertNotNull(taskName)
+		);
+		
 		fail("Not yet implemented");
 	}
 	
@@ -67,6 +90,21 @@ class TaskTest {
 	// not null
 	@Test
 	void taskDescTest() {
+		String taskDesc = "long 51 character description";
+	    // Declared int value instead of writing 51+ character description
+		// int actualLength = taskDesc.length();
+		int actualLength= 51;
+		int maxLength = 50;		
+		
+		assertAll("task description",
+			// required object
+			() -> assertFalse(taskDesc.isBlank()),
+			// max 50 characters
+			() -> assertFalse(maxLength > actualLength),	
+			// not null (test for "null")
+			() -> assertNotNull(taskDesc)
+		);
+		
 		fail("Not yet implemented");
 	}
 	

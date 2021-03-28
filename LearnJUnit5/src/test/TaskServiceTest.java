@@ -23,6 +23,11 @@ import org.junit.jupiter.api.Test;
 
 class TaskServiceTest {
 
+	// declare variables needed for testing
+	String taskID = "Task4567890";
+	String taskName = "Vacuum floor";
+	String taskDesc = "Use vacuum to clean the carpet and tile";
+	
 	// setup for all tests
 	/**
 	 * @throws java.lang.Exception
@@ -36,34 +41,67 @@ class TaskServiceTest {
 	 * @throws java.lang.Exception
 	 */
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() throws Exception {	
 	}
 	
 	
 	// Tests for task services
-	// test for create task service
-	// unique ID (existing ID != new ID)
-	// required: taskID, taskName, taskDesc
 	@Test
 	void createTaskTest() {
+		String taskID2 = "Task060800"; 
+				
+		assertAll("create task service",
+			// unique task ID (existing ID != new ID)
+			() -> assertNotEquals(taskID, taskID2),	
+			// required objects: taskID, task name, task description
+			() -> assertFalse(taskID.isBlank()),
+			() -> assertFalse(taskName.isBlank()),	
+			() -> assertFalse(taskDesc.isBlank())
+		);
 		
 		fail("Not yet implemented");
 	}
     
 	// test for delete task service
-	// cannot find contact via ID
-	// delete: taskID, taskName, task Desc
 	@Test
 	void deleteTaskTest() {
+		String taskID2 = "Task060800"; 
+		
+		assertAll("delete task service",
+			// cannot find known task via taskID
+			() -> assertEquals(taskID, taskID2),	
+			// delete: taskID, task name, task description
+			() -> assertTrue(taskID.isBlank()),	
+			() -> assertTrue(taskName.isBlank()),
+			() -> assertTrue(taskDesc.isBlank())
+		);
+		
 		fail("Not yet implemented");
 	}
 	
 	// test for update task service
-	// cannot find contact via taskID
-	// not updatable object: taskID
-	// update: taskName, task Desc
 	@Test
 	void updateTaskTest() {
+		String taskID2 = "TASK060800";
+		String taskName2 = "Remove trash";
+		String taskDesc2 = "Take trash bags to trash can";
+		
+		// taskID is not updatable
+		// Expected ID and actual ID should be matching
+		// String taskID3 = taskID;
+		String taskID3 = "Task4567890";
+		
+		
+		assertAll("update task service",
+			// cannot find known task via taskID
+			() -> assertEquals(taskID, taskID2),	
+			// not updatable object: task ID
+			() -> assertNotEquals(taskID, taskID3),	
+			// updatable objects: task name, task description
+			() -> assertNotEquals(taskName, taskName2),
+			() -> assertNotEquals(taskDesc, taskDesc2)
+		);
+		
 		fail("Not yet implemented");
 	}
 
