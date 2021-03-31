@@ -97,7 +97,7 @@ class TaskServiceTest {
 			() -> assertEquals(taskID, taskID2),	
 			// not updatable object: task ID
 			() -> assertNotEquals(taskID, taskID3),	
-			// updatable objects: task name, task description
+			// updatable objects: taask name, task description
 			() -> assertNotEquals(taskName, taskName2),
 			() -> assertNotEquals(taskDesc, taskDesc2)
 		);
