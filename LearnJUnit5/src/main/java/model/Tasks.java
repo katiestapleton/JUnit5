@@ -15,6 +15,7 @@ package main.java.model;
 
 public class Tasks {
 
+	// task objects
 	String taskID;
 	String taskName;
 	String taskDesc;

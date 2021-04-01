@@ -46,6 +46,9 @@ class TaskTest {
 	void taskIDtest() {
 		// task ID is 11 characters
 		String taskID = "Task45678901";
+		String taskID1 = "taskID01";
+		String taskID2 = "taskID02";
+				
 		int actualLength = taskID.length();
 		int maxLength = 10;
 		
@@ -54,6 +57,8 @@ class TaskTest {
 			() -> assertFalse(taskID.isBlank()),	
 			// max 10 characters
 			() -> assertFalse(maxLength > actualLength),
+			// unique task ID
+			() -> assertNotEquals(taskID1, taskID2),
 			// not null (test for "null")
 			() -> assertNotNull(taskID)
 		);

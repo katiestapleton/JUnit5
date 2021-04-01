@@ -7,18 +7,23 @@
 
 package main.java.model;
 
-import java.util.Calendar;
-import java.util.Date;
+
+import java.time.LocalDate;
 
 public class Appointment {
 
-	public Appointment() {
+	//public Appointment() {
 		
+	    // appointment objects
 	    String apptID;
-	    String apptDate;
 	    String apptDesc;
+	    // dates of today and tomorrow
+		LocalDate apptDate1 = LocalDate.now();
+		LocalDate apptDate2 = apptDate1.plusDays(1);
 		
+	    
+
 		// TODO Auto-generated constructor stub
-	}
+	//}
 
 }

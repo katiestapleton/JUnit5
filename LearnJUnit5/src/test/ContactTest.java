@@ -50,6 +50,8 @@ class ContactTest {
 	void testContactID() {
 		// contactID - 11 characters
 		String contactID = "ID123456789";
+		String contactID1 = "contID01";
+		String contactID2 = "contID02";
 		int actualLength = contactID.length();
 		int maxLength = 10;
 		
@@ -58,6 +60,8 @@ class ContactTest {
 			() -> assertFalse(contactID.isBlank()),
 		    // max 10 characters
 			() -> assertFalse(maxLength > actualLength),
+			// unique contact ID
+			() -> assertNotEquals(contactID1, contactID2),
 		    // not null (test for "null")
 			() -> assertNotNull(contactID)
 		);

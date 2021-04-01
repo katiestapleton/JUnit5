@@ -20,6 +20,11 @@ public class TaskService {
 		// TODO Auto-generated constructor stub
 	}
 	*/
+	// tasks objects
+	String taskID1 = "Task4567890";
+	String taskID2 = "TASK060800";
+	String taskName = "Vacuum floor";
+	String taskDesc = "Use vacuum to clean the carpet and tile";
 	
 	Tasks tasks = new Tasks();
 

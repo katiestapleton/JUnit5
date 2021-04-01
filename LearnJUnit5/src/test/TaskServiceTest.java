@@ -24,7 +24,8 @@ import org.junit.jupiter.api.Test;
 class TaskServiceTest {
 
 	// declare variables needed for testing
-	String taskID = "Task4567890";
+	String taskID1 = "Task4567890";
+	String taskID2 = "TASK060800";
 	String taskName = "Vacuum floor";
 	String taskDesc = "Use vacuum to clean the carpet and tile";
 	
@@ -52,9 +53,9 @@ class TaskServiceTest {
 				
 		assertAll("create task service",
 			// unique task ID (existing ID != new ID)
-			() -> assertNotEquals(taskID, taskID2),	
+			() -> assertNotEquals(taskID1, taskID2),	
 			// required objects: taskID, task name, task description
-			() -> assertFalse(taskID.isBlank()),
+			() -> assertFalse(taskID1.isBlank()),
 			() -> assertFalse(taskName.isBlank()),	
 			() -> assertFalse(taskDesc.isBlank())
 		);
@@ -65,13 +66,12 @@ class TaskServiceTest {
 	// test for delete task service
 	@Test
 	void deleteTaskTest() {
-		String taskID2 = "Task060800"; 
 		
 		assertAll("delete task service",
 			// cannot find known task via taskID
-			() -> assertEquals(taskID, taskID2),	
+			() -> assertEquals(taskID1, taskID2),	
 			// delete: taskID, task name, task description
-			() -> assertTrue(taskID.isBlank()),	
+			() -> assertTrue(taskID1.isBlank()),	
 			() -> assertTrue(taskName.isBlank()),
 			() -> assertTrue(taskDesc.isBlank())
 		);
@@ -82,7 +82,6 @@ class TaskServiceTest {
 	// test for update task service
 	@Test
 	void updateTaskTest() {
-		String taskID2 = "TASK060800";
 		String taskName2 = "Remove trash";
 		String taskDesc2 = "Take trash bags to trash can";
 		
@@ -94,10 +93,10 @@ class TaskServiceTest {
 		
 		assertAll("update task service",
 			// cannot find known task via taskID
-			() -> assertEquals(taskID, taskID2),	
+			() -> assertEquals(taskID1, taskID2),	
 			// not updatable object: task ID
-			() -> assertNotEquals(taskID, taskID3),	
-			// updatable objects: taask name, task description
+			() -> assertNotEquals(taskID1, taskID3),	
+			// updatable objects: task name, task description
 			() -> assertNotEquals(taskName, taskName2),
 			() -> assertNotEquals(taskDesc, taskDesc2)
 		);

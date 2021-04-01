@@ -25,13 +25,13 @@ import org.junit.jupiter.api.Test;
 // JUnit Testing for ContactService
 class ContactServiceTest {
 	
-	
 	// declare variables needed for testing
-	String contactID = "ID34567890";
+	String contactID1 = "ID34567890";
+	String contactID2 = "ID98765432";
 	String firstName = "Charlie";
 	String lastName = "Franklin";
 	String phone = "8665553579";
-	String address = "159 E Main St Springer IL";	
+	String address = "159 E Main St Springer IL";
 	
 	// setup for all tests
 	/**
@@ -59,9 +59,9 @@ class ContactServiceTest {
 		
 		assertAll("add contact service",
 			// unique contact ID (existing ID != new ID)
-			() -> assertNotEquals(contactID, contactID2),
+			() -> assertNotEquals(contactID1, contactID2),
 			// required: contactID, firstName, lastName, phone, address
-			() -> assertFalse(contactID.isBlank()),
+			() -> assertFalse(contactID1.isBlank()),
 			() -> assertFalse(firstName.isBlank()),
 			() -> assertFalse(lastName.isBlank()),
 			() -> assertFalse(phone.isBlank()),
@@ -78,9 +78,9 @@ class ContactServiceTest {
 		
 		assertAll("delete contact service",
 			// find known contact via contactID
-			() -> assertEquals(contactID, contactID2),
+			() -> assertEquals(contactID1, contactID2),
 			// delete: contactID, firstName, lastName, phone, address
-			() -> assertTrue(contactID.isBlank()),
+			() -> assertTrue(contactID1.isBlank()),
 			() -> assertTrue(firstName.isBlank()),
 			() -> assertTrue(lastName.isBlank()),
 			() -> assertTrue(phone.isBlank()),
@@ -106,11 +106,11 @@ class ContactServiceTest {
 		
 		assertAll("update contact service",
 			// find known contact via contactID
-			() -> assertEquals(contactID, contactID2),
+			() -> assertEquals(contactID1, contactID2),
 			// not updatable object: contactID
-			() -> assertNotEquals(contactID, contactID3),
+			() -> assertNotEquals(contactID1, contactID3),
 			// updatable objects: firstName, lastName, phone, address
-			() -> assertNotEquals(contactID, contactID2),
+			() -> assertNotEquals(contactID1, contactID2),
 			() -> assertNotEquals(firstName, firstName2),
 			() -> assertNotEquals(lastName, lastName2),
 			() -> assertNotEquals(phone, phone2),

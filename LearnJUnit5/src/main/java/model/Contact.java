@@ -20,6 +20,7 @@ package main.java.model;
 public class Contact {
 
 	// public Contact() {
+	// contact objects
 	String contactID;
 	String firstName;
 	String lastName;
