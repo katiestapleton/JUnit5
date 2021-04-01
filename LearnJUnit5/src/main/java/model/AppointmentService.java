@@ -9,8 +9,15 @@ package main.java.model;
 
 public class AppointmentService {
 
-	public AppointmentService() {
-		// TODO Auto-generated constructor stub
+	Appointment appt = new Appointment();
+	
+	// add appointment using appointment ID
+	public void CreateAppt() {
 	}
+	
+	// delete appointment using appointment ID
+	public void DeleteAppt() {
+	}
+
 
 }

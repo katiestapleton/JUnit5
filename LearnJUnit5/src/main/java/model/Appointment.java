@@ -7,11 +7,16 @@
 
 package main.java.model;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class Appointment {
 
 	public Appointment() {
 		
-	
+	    String apptID;
+	    String apptDate;
+	    String apptDesc;
 		
 		// TODO Auto-generated constructor stub
 	}

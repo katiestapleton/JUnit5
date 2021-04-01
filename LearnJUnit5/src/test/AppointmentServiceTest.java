@@ -21,21 +21,30 @@ class AppointmentServiceTest {
 	static void setUpBeforeClass() throws Exception {
 	}
 
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
 	@BeforeEach
 	void setUp() throws Exception {
 	}
-
+	
+    // test create appointment service
+	@Test
+	void testCreateAppt() {
+		
+		fail("Not yet implemented");
+	}
+	
+    // test delete appointment service
+	@Test
+	void testDeleteAppt() {
+		
+		fail("Not yet implemented");
+	}
+	
 	@AfterEach
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
 	}
 
 }

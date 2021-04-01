@@ -5,10 +5,10 @@
  * 03/31/2020
  */
 
+
 package test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -21,21 +21,37 @@ class AppointmentTest {
 	static void setUpBeforeClass() throws Exception {
 	}
 
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
 	@BeforeEach
 	void setUp() throws Exception {
 	}
-
+	
+	// test appointment ID object
+	@Test
+	void testApptID() {
+		
+		fail("Not yet implemented");
+	}
+	
+	// test appointment date object
+	@Test
+	void testApptDate() {
+		
+		fail("Not yet implemented");
+	}
+	
+	// test appointment description
+	@Test
+	void testApptDesc() {
+		
+		fail("Not yet implemented");
+	}
+	
 	@AfterEach
 	void tearDown() throws Exception {
 	}
 
-	@Test
-	void test() {
-		fail("Not yet implemented");
+	@AfterAll
+	static void tearDownAfterClass() throws Exception {
 	}
 
 }
