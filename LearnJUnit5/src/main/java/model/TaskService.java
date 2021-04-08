@@ -1,3 +1,4 @@
+package main.java.model;
 /**
  * @author Katie Stapleton
  * SNHU 320 Testing
@@ -10,8 +11,6 @@
 	 * delete task per task US
 	 * Update tasks per task ID: name, description
 	 */
-
-package main.java.model;
 
 public class TaskService {
 

@@ -18,7 +18,7 @@
 package main.java.model;
 
 public class Contact {
-
+/*
 	// public Contact() {
 	// contact objects
 	String contactID;
@@ -27,7 +27,7 @@ public class Contact {
 	String phone;
 	String address;
 	// }
-	
+	*/
 	/*  UNSURE OF WHICH IS THE PROPER WAY TO CODE THIS
 	private String contactID;
 	private String firstName;

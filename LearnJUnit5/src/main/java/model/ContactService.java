@@ -1,3 +1,4 @@
+package main.java.model;
 /**
  * @author Katie Stapleton
  * SNHU 320 Testing
@@ -10,9 +11,6 @@
 	 * delete contacts per contact ID
 	 * Update contacts per contact ID: firstName, lastName, phone, address
 	 */
-
-package main.java.model;
-
 
 public class ContactService {
 	
@@ -27,15 +25,19 @@ public class ContactService {
 	Contact contact = new Contact(); 
 	
 	//create new contact with unique contact ID
-	public void createContact() {
+	public void createContact(ContactID) {
+		
 	}
 	
 	//delete contact using contact ID
-	public void deleteContact() {
+	public void deleteContact(contactID) {
+		return.delete
+		
 	}
 	
 	//update contact info using contact ID
-	public void updateContact() {
+	public void updateContact(contactID) {
+		
 	}
 
 }
