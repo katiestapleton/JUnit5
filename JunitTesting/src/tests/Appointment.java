@@ -1,3 +1,9 @@
+/*
+ * @author Katie Stapleton
+ * SNHU 320 Testing
+ * Module 5 - Milestone
+ */
+
 package tests;
 
 import java.time.LocalDate;
@@ -7,41 +13,42 @@ public class Appointment {
     private String apptDesc;
 	private LocalDate apptDate;
 	
-	
+	// appointment information (constructor)
 	public Appointment(String apID, String apDesc, LocalDate apDate) {
-		// appointment objects. max characters (10ch, 50ch, DATE)
 		this.apptID = apID;
 		this.apptDesc = apDesc;
 		this.apptDate = apDate;
 	}
 
 
+    // appointment ID:  required, uniqueID, max 10 ch, not null, not updatable
+	public void setApptID(String IDappt) {
+		
+		this.apptID = IDappt;
+	}
+	
 	public String getApptID() {
 		return apptID;
 	}
 
-
-	public void setApptID(String IDappt) {
-		this.apptID = IDappt;
+    // appointment description: required,
+	public void setApptDesc(String descAppt) {
+		
+		this.apptDesc = descAppt;
 	}
-
-
+	
 	public String getApptDesc() {
 		return apptDesc;
 	}
 
-
-	public void setApptDesc(String descAppt) {
-		this.apptDesc = descAppt;
+    // appointment date: required, 
+	public void setApptDate(LocalDate DateAppt) {
+		
+		this.apptDate = DateAppt;
 	}
-
-
+	
 	public LocalDate getApptDate() {
 		return apptDate;
 	}
 
-
-	public void setApptDate(LocalDate DateAppt) {
-		this.apptDate = DateAppt;
-	}
 }

@@ -1,3 +1,9 @@
+/*
+ * @author Katie Stapleton
+ * SNHU 320 Testing
+ * Module 3 - Milestone
+ */
+
 package tests;
 
 public class Contact {
@@ -7,9 +13,8 @@ public class Contact {
 	private String phone;
 	private String address;
 	
-	
+	// contact demographics (constructor)
 	public Contact(String ctID, String ctFirst, String ctLast, String ctPhone, String ctAddress) {
-		//contact objects. max character limits (10ch x4, 30ch)
 		this.contactID = ctID;
 		this.firstName = ctFirst;
 		this.lastName = ctLast;
@@ -18,49 +23,50 @@ public class Contact {
 	}
 
 
-	public String getContactID() {
-		return contactID;
-	}
-
+	// contact ID: required, uniqueID, max 10ch, not null, not updatable
 	public void setContactID(String IDcontact) {
+		
 		this.contactID = IDcontact;
 	}
 
-
+	public String getContactID() {
+		return contactID;
+	}
+	
+	// contact first name: required, max 10 ch, not null
+	public void setFirstName(String nameFirst) {
+		this.firstName = nameFirst;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
 
-	public void setFirstName(String nameFirst) {
-		this.firstName = nameFirst;
-	}
-
-
-	public String getLastName() {
-		return lastName;
-	}
-
-
+	// contact last name: required, == 10 digits, not null
 	public void setLastName(String nameLast) {
 		this.lastName = nameLast;
 	}
-
+	
+	public String getLastName() {
+		return lastName;
+	}
+	
+	// contact phone number: required, max 10ch, not null
+	public void setPhone(String numPhone) {
+		this.phone = numPhone;
+	}
 	
 	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(String numPhone) {
-		this.phone = numPhone;
+	// contact address: required, max 30ch, not null 
+	public void setAddress(String addressCt) {
+		this.address = addressCt;
 	}
-
-
+	
 	public String getAddress() {
 		return address;
 	}
 
-
-	public void setAddress(String addressCt) {
-		this.address = addressCt;
-	}
 }

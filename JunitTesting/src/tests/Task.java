@@ -1,3 +1,9 @@
+/*
+ * @author Katie Stapleton
+ * SNHU 320 Testing
+ * Module 4 - Milestone
+ */
+
 package tests;
 
 public class Task {
@@ -5,35 +11,38 @@ public class Task {
 	private String taskName;
 	private String taskDesc;
 	
+	// task information (constructor)
 	public Task(String tkID, String tkName, String tkDesc) {
-		// task objects. max character limits (10ch, 20ch, 50ch)
 		this.taskID = tkID;
 		this.taskName = tkName;
 		this.taskDesc = tkDesc;
 	}
 
+	// task ID: required, uniqueID, max 10ch, not null, not updatable
+	public void setTaskID(String IDtask) {
+		this.taskID = IDtask;
+	}
+	
 	public String getTaskID() {
 		return taskID;
 	}
 
-	public void setTaskID(String IDtask) {
-		this.taskID = IDtask;
+	// task name:  required, 
+	public void setTaskName(String nameTask) {
+		this.taskName = nameTask;
 	}
-
+	
 	public String getTaskName() {
 		return taskName;
 	}
 
-	public void setTaskName(String nameTask) {
-		this.taskName = nameTask;
-	}
-
-	public String getTaskDesc() {
-		return taskDesc;
-	}
-
+    // task description: required, max 30ch, not null
 	public void setTaskDesc(String descTask) {
 		this.taskDesc = descTask;
+	}
+	
+	public String getTaskDesc() {
+		return taskDesc;
 	}
 
 }
