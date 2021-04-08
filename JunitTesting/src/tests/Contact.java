@@ -1,11 +1,11 @@
 package tests;
 
 public class Contact {
-	String contactID;
-	String firstName;
-	String lastName;
-	String phone;
-	String address;
+	private String contactID;
+	private String firstName;
+	private String lastName;
+	private String phone;
+	private String address;
 	
 	
 	public Contact(String ctID, String ctFirst, String ctLast, String ctPhone, String ctAddress) {
@@ -17,12 +17,50 @@ public class Contact {
 		this.address = ctAddress;
 	}
 
-}
 
-/*
-		contactID = "1234567890";
-		firstName = "Alexandria";
-		lastName = "Hutchinson";
-		phone = "8885551111";
-		address = "1234 pretium neque placerat St";
-*/
+	public String getContactID() {
+		return contactID;
+	}
+
+	public void setContactID(String IDcontact) {
+		this.contactID = IDcontact;
+	}
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String nameFirst) {
+		this.firstName = nameFirst;
+	}
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+	public void setLastName(String nameLast) {
+		this.lastName = nameLast;
+	}
+
+	
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String numPhone) {
+		this.phone = numPhone;
+	}
+
+
+	public String getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(String addressCt) {
+		this.address = addressCt;
+	}
+}

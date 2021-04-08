@@ -1,9 +1,9 @@
 package tests;
 
 public class Task {
-	String taskID;
-	String taskName;
-	String taskDesc;
+	private String taskID;
+	private String taskName;
+	private String taskDesc;
 	
 	public Task(String tkID, String tkName, String tkDesc) {
 		// task objects. max character limits (10ch, 20ch, 50ch)
@@ -12,12 +12,29 @@ public class Task {
 		this.taskDesc = tkDesc;
 	}
 
+	public String getTaskID() {
+		return taskID;
+	}
+
+	public void setTaskID(String IDtask) {
+		this.taskID = IDtask;
+	}
+
+	public String getTaskName() {
+		return taskName;
+	}
+
+	public void setTaskName(String nameTask) {
+		this.taskName = nameTask;
+	}
+
+	public String getTaskDesc() {
+		return taskDesc;
+	}
+
+	public void setTaskDesc(String descTask) {
+		this.taskDesc = descTask;
+	}
+
 }
 
-
-/*
-		taskID = "1234567890";
-		taskName = "Nulla at odio proint";
-		taskDesc = "Donec justo arcu, imperdiet ut urna sit amet morbi";
-
-*/

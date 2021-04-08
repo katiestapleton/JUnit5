@@ -3,9 +3,9 @@ package tests;
 import java.time.LocalDate;
 
 public class Appointment {
-    String apptID;
-    String apptDesc;
-	LocalDate apptDate;
+    private String apptID;
+    private String apptDesc;
+	private LocalDate apptDate;
 	
 	
 	public Appointment(String apID, String apDesc, LocalDate apDate) {
@@ -14,14 +14,34 @@ public class Appointment {
 		this.apptDesc = apDesc;
 		this.apptDate = apDate;
 	}
-}
-	/*
-	
-	apptID = "1234567890";
-	apptDesc = "Cras suscipit lacus ut mi rutrum, vitae vestibulum";
-	apptDateNow = LocalDate.now();
 
-    Appointment appt0 = new Appointment();
-    Appointment appt1 = new Appointment();
+
+	public String getApptID() {
+		return apptID;
+	}
+
+
+	public void setApptID(String IDappt) {
+		this.apptID = IDappt;
+	}
+
+
+	public String getApptDesc() {
+		return apptDesc;
+	}
+
+
+	public void setApptDesc(String descAppt) {
+		this.apptDesc = descAppt;
+	}
+
+
+	public LocalDate getApptDate() {
+		return apptDate;
+	}
+
+
+	public void setApptDate(LocalDate DateAppt) {
+		this.apptDate = DateAppt;
+	}
 }
-*/
