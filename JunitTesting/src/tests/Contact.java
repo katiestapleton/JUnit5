@@ -6,35 +6,38 @@
 
 package tests;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Contact {
-	private String contactID;
+	private final String contactID;
 	private String firstName;
 	private String lastName;
 	private String phone;
 	private String address;
+	private static AtomicLong idGenerator = new AtomicLong();
 	
-	// contact demographics (constructor)
+	// contact demographics (CONSTRUCTOR)
 	public Contact(String ctID, String ctFirst, String ctLast, String ctPhone, String ctAddress) {
-		this.contactID = ctID;
-		this.firstName = ctFirst;
+		// contact ID
+		ctID = String.valueOf(idGenerator.getAndIncrement());
+		this.contactID = ctID;		
+		this.firstName = ctFirst;		
 		this.lastName = ctLast;
 		this.phone = ctPhone;
 		this.address = ctAddress;
 	}
 
 
-	// contact ID: required, uniqueID, max 10ch, not null, not updatable
-	public void setContactID(String IDcontact) {
-		
-		this.contactID = IDcontact;
-	}
-
+	// SETTERS AND GETTERS
+	// required, uniqueID, max 10ch, not updatable, not null
+	// contact ID is NOT updatable. no setter allowed
 	public String getContactID() {
 		return contactID;
 	}
 	
 	// contact first name: required, max 10 ch, not null
 	public void setFirstName(String nameFirst) {
+		nameFirst = null;
 		this.firstName = nameFirst;
 	}
 	
@@ -44,6 +47,7 @@ public class Contact {
 
 	// contact last name: required, == 10 digits, not null
 	public void setLastName(String nameLast) {
+		nameLast = null;
 		this.lastName = nameLast;
 	}
 	
@@ -53,6 +57,7 @@ public class Contact {
 	
 	// contact phone number: required, max 10ch, not null
 	public void setPhone(String numPhone) {
+		numPhone = null;
 		this.phone = numPhone;
 	}
 	
@@ -62,6 +67,7 @@ public class Contact {
 
 	// contact address: required, max 30ch, not null 
 	public void setAddress(String addressCt) {
+		addressCt = null;
 		this.address = addressCt;
 	}
 	
