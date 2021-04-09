@@ -14,23 +14,39 @@ public class Task {
 	private String taskDesc;
 	private static AtomicLong idGenerator = new AtomicLong();
 	
-	// task information (constructor)
-	public Task(String tkID, String tkName, String tkDesc) {
-		tkID = String.valueOf(idGenerator.getAndIncrement());
-		this.taskID = tkID;
-		this.taskName = tkName;
-		this.taskDesc = tkDesc;
+	// task information w/ requirements. CONSTRUCTOR
+	// note: null values remain null for data integrity/placeholder
+	public Task(String IDtask, String nameTask, String descTask) {
+		// task ID generated when constructor is called. unique
+		IDtask = String.valueOf(idGenerator.getAndIncrement());
+		this.taskID = IDtask;
+		
+		// task name requirements
+		if (nameTask.isBlank()) {
+			nameTask = null;
+		}
+		else if (nameTask.length() > 20) {
+			nameTask = nameTask.substring(0,20);
+		}
+		this.taskName = nameTask;
+		
+		// task description requirements
+		if (descTask.isBlank()) {
+			descTask = null;
+		}
+		else if (descTask.length() > 50) {
+			descTask = descTask.substring(0, 50);
+		}
+		this.taskDesc = descTask;
 	}
 
-	// task ID: required, uniqueID, max 10ch, not updatable, not null
-    // task ID is NOT updatable. no setter allowed
+	// GETTERS AND SETTERS
 	public String getTaskID() {
 		return taskID;
 	}
 
-	// task name:  required, max 20ch, not null
+
 	public void setTaskName(String nameTask) {
-		nameTask = null;
 		this.taskName = nameTask;
 	}
 	
@@ -40,7 +56,6 @@ public class Task {
 
     // task description: required, max 50ch, not null
 	public void setTaskDesc(String descTask) {
-		descTask = null;
 		this.taskDesc = descTask;
 	}
 	

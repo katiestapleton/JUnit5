@@ -16,28 +16,56 @@ public class Contact {
 	private String address;
 	private static AtomicLong idGenerator = new AtomicLong();
 	
-	// contact demographics (CONSTRUCTOR)
-	public Contact(String ctID, String ctFirst, String ctLast, String ctPhone, String ctAddress) {
-		// contact ID
-		ctID = String.valueOf(idGenerator.getAndIncrement());
-		this.contactID = ctID;		
-		this.firstName = ctFirst;		
-		this.lastName = ctLast;
-		this.phone = ctPhone;
-		this.address = ctAddress;
+	
+	// contact demographics w/ requirements. CONSTRUCTOR
+	// note: null values remain null for data integrity/placeholder
+	public Contact(String IDcontact, String nameFirst, String nameLast, String phoneContact, String addressContact) {
+
+		// contact ID generated when constructor is called. unique
+		IDcontact = String.valueOf(idGenerator.getAndIncrement());
+		this.contactID = IDcontact;	
+		
+		// first name requirements
+		if (nameFirst.isBlank()) {
+			nameFirst = null;
+		} else if (nameFirst.length() > 10) {
+			nameFirst = nameFirst.substring(0,10);
+		}
+		this.firstName = nameFirst;	
+		
+		// last name requirements
+		if (nameLast.isBlank()) {
+			nameLast = null;
+		} else if (nameLast.length() > 10) {
+			nameLast = nameLast.substring(0,10);
+		}
+		this.lastName = nameLast;
+		
+		// phone requirements
+		String pattern = "\\d{10}";
+		if (phoneContact.isBlank()) {
+			phoneContact = null;
+		} else if (phoneContact != pattern) {
+			phoneContact = "5555555555";
+		} 
+		this.phone = phoneContact;
+		
+		//address requirements
+		if (addressContact.isBlank()) {
+			addressContact = null;
+		} else if (addressContact.length() > 10) {
+			addressContact = addressContact.substring(0,10);
+		}
+		this.address = addressContact;
 	}
 
 
 	// SETTERS AND GETTERS
-	// required, uniqueID, max 10ch, not updatable, not null
-	// contact ID is NOT updatable. no setter allowed
 	public String getContactID() {
 		return contactID;
 	}
 	
-	// contact first name: required, max 10 ch, not null
 	public void setFirstName(String nameFirst) {
-		nameFirst = null;
 		this.firstName = nameFirst;
 	}
 	
@@ -45,9 +73,7 @@ public class Contact {
 		return firstName;
 	}
 
-	// contact last name: required, == 10 digits, not null
 	public void setLastName(String nameLast) {
-		nameLast = null;
 		this.lastName = nameLast;
 	}
 	
@@ -55,9 +81,7 @@ public class Contact {
 		return lastName;
 	}
 	
-	// contact phone number: required, max 10ch, not null
 	public void setPhone(String numPhone) {
-		numPhone = null;
 		this.phone = numPhone;
 	}
 	
@@ -65,9 +89,7 @@ public class Contact {
 		return phone;
 	}
 
-	// contact address: required, max 30ch, not null 
 	public void setAddress(String addressCt) {
-		addressCt = null;
 		this.address = addressCt;
 	}
 	

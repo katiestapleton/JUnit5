@@ -12,27 +12,48 @@ import java.time.LocalDate;
 public class Appointment {
     private final String apptID;
     private String apptDesc;
+ // FIX 1: LOCAL DATE is incorrect declaration.
 	private LocalDate apptDate;
 	private static AtomicLong idGenerator = new AtomicLong();
 	
-	// appointment information (constructor)
-	public Appointment(String IDappt, String apDesc, LocalDate apDate) {
+	// FIX 1B: update LocalDate to new object
+	// appointment information w/ requirements (constructor)
+	// note: null values remain null for data integrity/placeholder
+	public Appointment(String IDappt, String descAppt, LocalDate dateAppt) {
+		// appointment ID generated when constructor is called. unique
 		IDappt = String.valueOf(idGenerator.getAndIncrement());
 		this.apptID = IDappt;
-		this.apptDesc = apDesc;
-		this.apptDate = apDate;
+		
+		// appointment description requirements
+		if (IDappt.isBlank()) {
+			IDappt = null;
+		}
+		else if (descAppt.length() > 50) {
+			descAppt = descAppt.substring(0, 50);
+		}
+		this.apptDesc = descAppt;
+		
+		// FIX 1c: LOCAL DATE is incorrect variable.
+		// appointment date requirements
+/*
+		if (dateAppt.isBlank()) {
+			dateAppt = null;
+		}
+		else if (dateAppt IN PAST ) {
+			
+		}
+		*/
+		this.apptDate = dateAppt;
 	}
 
 
-    // appointment ID:  required, uniqueID, max 10ch, not updatable, not null
-	// appointment ID is NOT updatable. no setter allowed	
+    // GETTERS AND SETTERS
 	public String getApptID() {
 		return apptID;
 	}
 
     // appointment description: required, 50ch max, not null
-	public void setApptDesc(String descAppt) {
-		
+	public void setApptDesc(String descAppt) {		
 		this.apptDesc = descAppt;
 	}
 	
@@ -42,7 +63,6 @@ public class Appointment {
 
     // appointment date: required, NOT past date, not null
 	public void setApptDate(LocalDate DateAppt) {
-		
 		this.apptDate = DateAppt;
 	}
 	
