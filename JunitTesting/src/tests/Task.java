@@ -14,7 +14,7 @@ public class Task {
 	private String taskDesc;
 	private static AtomicLong idGenerator = new AtomicLong();
 	
-	// task information w/ requirements. CONSTRUCTOR
+	// Constructs Task information including requirements.
 	// note: null values remain null for data integrity/placeholder
 	public Task(String IDtask, String nameTask, String descTask) {
 		// task ID generated when constructor is called. unique
@@ -45,8 +45,14 @@ public class Task {
 		return taskID;
 	}
 
-
+    // task name requirements
 	public void setTaskName(String nameTask) {
+		if (nameTask.isBlank()) {
+			nameTask = null;
+		}
+		else if (nameTask.length() > 20) {
+			nameTask = nameTask.substring(0,20);
+		}
 		this.taskName = nameTask;
 	}
 	
@@ -54,8 +60,14 @@ public class Task {
 		return taskName;
 	}
 
-    // task description: required, max 50ch, not null
+    // task description requirements
 	public void setTaskDesc(String descTask) {
+		if (descTask.isBlank()) {
+			descTask = null;
+		}
+		else if (descTask.length() > 50) {
+			descTask = descTask.substring(0, 50);
+		}
 		this.taskDesc = descTask;
 	}
 	

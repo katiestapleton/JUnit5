@@ -1,4 +1,10 @@
-package Junit;
+/*
+ * @author Katie Stapleton
+ * SNHU 320 Testing
+ * Module 4 - Milestone
+ */
+
+package tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,8 +13,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
 
-class test {
+class TaskTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -27,57 +34,32 @@ class test {
 	}
 
 	@Test
-	void testContact() {
+	void testTask() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testSetContactID() {
+	void testGetTaskID() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testGetContactID() {
+	void testSetTaskName() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testSetFirstName() {
+	void testGetTaskName() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testGetFirstName() {
+	void testSetTaskDesc() {
 		fail("Not yet implemented"); // TODO
 	}
 
 	@Test
-	void testSetLastName() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testGetLastName() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testSetPhone() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testGetPhone() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testSetAddress() {
-		fail("Not yet implemented"); // TODO
-	}
-
-	@Test
-	void testGetAddress() {
+	void testGetTaskDesc() {
 		fail("Not yet implemented"); // TODO
 	}
 

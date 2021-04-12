@@ -26,10 +26,11 @@ public class ContactService {
        contactList.add(contact);
 	}
 	
-	// read (without user displays)
+/*	// read (without user displays)
 	public void readContact() {
 		
 	}
+*/
 	
 	// delete contact using contact ID
 	public void deleteContact(String contactID) {

@@ -30,6 +30,18 @@ public class AppointmentService {
 		
 }
 
+	/*	
+	// read (without user displays)
+	public void readAppt() {
+		
+	}
+	
+	
+	// update
+	public void updateAppt() {
+		
+	}
+	*/
 
 /*https://www.tutorialspoint.com/what-is-the-difference-between-getter-setter-methods-and-constructor-in-java
  *     array list is cars

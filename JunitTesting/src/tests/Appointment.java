@@ -58,8 +58,14 @@ public class Appointment {
 	}
 
     // appointment date: required, NOT past date, not null
-	public void setApptDate(LocalDateTime DateAppt) {
-		this.apptDate = DateAppt;
+	public void setApptDate(LocalDateTime dateAppt) {
+		LocalDateTime currentTime = LocalDateTime.now();
+		Boolean apptBeforeNow = dateAppt.isBefore(currentTime);
+		// appointment must be present/future tense
+		if (apptBeforeNow == true) {
+			apptDate = null;
+		}
+		this.apptDate = dateAppt;
 	}
 	
 	public LocalDateTime getApptDate() {

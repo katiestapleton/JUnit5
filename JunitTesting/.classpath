@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry including="src/**.java" kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry including="src/**.java" kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5">
 		<attributes>
 			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/Program Files/Coding/Eclipse/eclipse/plugins/org.junit.jupiter.api_5.7.0.v20201026-1537.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://junit.org/junit5/docs/current/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/ladyg/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar" sourcepath="C:/Users/ladyg/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.junit.jupiter"/>
+			<attribute name="maven.artifactId" value="junit-jupiter-api"/>
+			<attribute name="maven.version" value="5.7.1"/>
+			<attribute name="maven.scope" value="test"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
