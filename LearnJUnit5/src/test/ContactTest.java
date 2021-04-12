@@ -46,7 +46,7 @@ class ContactTest {
 		
 		assertAll("contact ID",
 			// required object
-			() -> assertFalse(contactID.isBlank()),
+			() -> assertFalse(contactID.isBlank(), "thetest"),
 		    // more than 10 characters
 			() -> assertFalse(maxLength < actualLength),
 		    // not null (test for "null")

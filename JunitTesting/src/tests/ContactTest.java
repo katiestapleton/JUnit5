@@ -22,6 +22,7 @@ import org.junit.jupiter.api.Test;
 class ContactTest {
 
 	// Constructors provides data to perform the tests
+	//     Contact(String IDcontact, String nameFirst, String nameLast, String phoneContact, String addressContact)
 	// check if within requirements
 	Contact contactGood = new Contact("ID01234567", "Yamaguchi", "Yoshihiro", "8885552222", "222 Mauris in vulputate quam St");
     // check if outside requirements
@@ -51,7 +52,7 @@ class ContactTest {
 		// clean after each given case
 	}
 
-	// Test Contact ID Requirements
+	// test Contact ID Requirements
 	@Test
 	@DisplayName("Contact: Contact ID requirements")
 	// Contact Id: required, unique, max 10 characters
@@ -66,7 +67,7 @@ class ContactTest {
 		fail("Contact ID does not meet all requirements");
 	}
 
-	// Test Contact First Name Requirements
+	// test Contact First Name Requirements
 	@Test
 	@DisplayName("Contact: First Name requirements")
 	void testFirstName() {
@@ -79,14 +80,14 @@ class ContactTest {
 		fail("First name does not meet all requirements");
 	}
 
-	// Test Contact Last Name Requirements
+	// test Contact Last Name Requirements
 	@Test
 	@DisplayName("Contact: Last Name Requirements")
 	void testLastName() {
 		assertAll("last name requirements: max 10 ch, not null, required",
 				() -> assertTrue((contactGood.getLastName()).length() <= 10, "Last Name is limited to 10 character maximum"),
 				() -> assertNotNull(contactGood.getLastName(), "Last Name cannot be null"),
-				() -> assertFalse((contactGood.getLastName()).isBlank(), "Last Name caanot be blank")
+				() -> assertFalse((contactGood.getLastName()).isBlank(), "Last Name cannot be blank")
 				);
 		fail("Last name does not meet all requirements");
 	}

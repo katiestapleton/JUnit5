@@ -24,8 +24,8 @@ public class Appointment {
 		this.apptID = IDappt;
 		
 		// appointment description requirements
-		if (IDappt.isBlank()) {
-			IDappt = null;
+		if (descAppt.isBlank()) {
+			descAppt = null;
 		}
 		else if (descAppt.length() > 50) {
 			descAppt = descAppt.substring(0, 50);
@@ -49,7 +49,13 @@ public class Appointment {
 	}
 
     // appointment description: required, 50ch max, not null
-	public void setApptDesc(String descAppt) {		
+	public void setApptDesc(String descAppt) {	
+		if (descAppt.isBlank()) {
+			descAppt = null;
+		}
+		else if (descAppt.length() > 50) {
+			descAppt = descAppt.substring(0, 50);
+		}
 		this.apptDesc = descAppt;
 	}
 	
